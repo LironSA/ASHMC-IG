@@ -7,8 +7,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 * id 1..1
 
 // Identifier slicing
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator[0].type = #value
+* identifier ^slicing.discriminator[0].path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.ordered = false
 * identifier contains cml 0..1
@@ -17,8 +17,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 //xxx
 // Clinical Status slicing
-* clinicalStatus.coding ^slicing.discriminator.type = #value
-* clinicalStatus.coding ^slicing.discriminator.path = "system"
+* clinicalStatus.coding ^slicing.discriminator[0].type = #value
+* clinicalStatus.coding ^slicing.discriminator[0].path = "system"
 * clinicalStatus.coding ^slicing.rules = #open
 * clinicalStatus.coding ^slicing.ordered = false
 * clinicalStatus.coding contains 
@@ -36,8 +36,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 //xxx
 // Verification Status slicing
-* verificationStatus.coding ^slicing.discriminator.type = #value
-* verificationStatus.coding ^slicing.discriminator.path = "system"
+* verificationStatus.coding ^slicing.discriminator[0].type = #value
+* verificationStatus.coding ^slicing.discriminator[0].path = "system"
 * verificationStatus.coding ^slicing.rules = #open
 * verificationStatus.coding ^slicing.ordered = false
 * verificationStatus.coding contains 
@@ -55,8 +55,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 //xxx
 // Category slicing
-* category.coding ^slicing.discriminator.type = #value
-* category.coding ^slicing.discriminator.path = "system"
+* category.coding ^slicing.discriminator[0].type = #value
+* category.coding ^slicing.discriminator[0].path = "system"
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.ordered = false
 * category.coding contains 
@@ -76,8 +76,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 //xxx
 // Code slicing
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding ^slicing.ordered = false
 * code.coding contains 
