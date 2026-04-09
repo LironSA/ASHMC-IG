@@ -77,3 +77,4 @@ Description: "Test"
 * category.coding[ash].system = "http://fhir.ashmc.co.il/cs/cml-diag-category" (exactly)
 * category.coding[ash].code 0..1
 * category.coding[ash].display 0..1
+* insert ConformanceMetadata

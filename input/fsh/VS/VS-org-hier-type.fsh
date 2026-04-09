@@ -5,4 +5,4 @@ Description: "Organization Hierarchy Type"
 // * insert ConformanceMetadata
 * ^url = $vsOrgHierType
 * include codes from system $csOrgHierType
-
+* insert ConformanceMetadata

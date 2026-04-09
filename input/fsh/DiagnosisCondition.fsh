@@ -111,3 +111,4 @@ Description: "Profile for ASHMC Diagnosis Condition"
 // Encounter identifier
 * encounter.identifier.system 0..1
 * encounter.identifier.system = "http://fhir.ashmc.co.il/identifier/cml-enc-session-id" (exactly)
+* insert ConformanceMetadata
