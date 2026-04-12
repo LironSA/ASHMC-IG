@@ -15,8 +15,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 
 // Identifier slicing
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator[0].type = #value
+* identifier ^slicing.discriminator[0].path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^slicing.ordered = false
 * identifier contains cml 0..1 and  mv 0..1
@@ -29,8 +29,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 
 // Clinical Status slicing
-* clinicalStatus.coding ^slicing.discriminator.type = #value
-* clinicalStatus.coding ^slicing.discriminator.path = "system"
+* clinicalStatus.coding ^slicing.discriminator[0].type = #value
+* clinicalStatus.coding ^slicing.discriminator[0].path = "system"
 * clinicalStatus.coding ^slicing.rules = #open
 * clinicalStatus.coding ^slicing.ordered = false
 * clinicalStatus.coding contains hl7 0..1 and ash 0..1
@@ -44,8 +44,8 @@ Description: "Profile for ASHMC Diagnosis Condition"
 
 
 // Verification Status slicing
-* verificationStatus.coding ^slicing.discriminator.type = #value
-* verificationStatus.coding ^slicing.discriminator.path = "system"
+* verificationStatus.coding ^slicing.discriminator[0].type = #value
+* verificationStatus.coding ^slicing.discriminator[0].path = "system"
 * verificationStatus.coding ^slicing.rules = #open
 * verificationStatus.coding ^slicing.ordered = false
 * verificationStatus.coding contains hl7 0..1 and ash 0..1
@@ -72,11 +72,29 @@ Description: "Profile for ASHMC Diagnosis Condition"
 * category[ilcore].coding[mv].system = "http://fhir.ashmc.co.il/cs/mv-diag-category" (exactly)
 * category[ilcore].coding[mv].code 0..1
 * category[ilcore].coding[mv].display 0..1
+* category.coding ^slicing.discriminator[0].type = #value
+* category.coding ^slicing.discriminator[0].path = "system"
+* category.coding ^slicing.rules = #open
+* category.coding ^slicing.ordered = false
+* category.coding contains 
+    hl7 0..1 and
+    ash 0..1
+
+* category.coding[hl7].system 1..1
+* category.coding[hl7].system = "http://terminology.hl7.org/CodeSystem/condition-category" (exactly)
+* category.coding[hl7].code 0..1
+* category.coding[hl7].display 0..1
+
+// * category.coding[ash] from http://fhir.ashmc.co.il/cs/cml-diag-category (required)
+* category.coding[ash].system 1..1
+* category.coding[ash].system = "http://fhir.ashmc.co.il/cs/cml-diag-category" (exactly)
+* category.coding[ash].code 0..1
+* category.coding[ash].display 0..1
 
 
 // Code slicing
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding ^slicing.ordered = false
 * code.coding contains 
@@ -106,3 +124,9 @@ Description: "Profile for ASHMC Diagnosis Condition"
 * code.coding[extend].system = "http://fhir.ashmc.co.il/cs/diag-extended-code" (exactly)
 * code.coding[extend].code 1..1
 * code.coding[extend].display 0..1
+
+//xxx
+// Encounter identifier
+* encounter.identifier.system 0..1
+* encounter.identifier.system = "http://fhir.ashmc.co.il/identifier/cml-enc-session-id" (exactly)
+* insert ConformanceMetadata

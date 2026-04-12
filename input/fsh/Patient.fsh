@@ -26,6 +26,7 @@ Description: "Patient profile for ASHMC"
 * identifier[internal].system 1..1
 * identifier[internal].system = "http://fhir.ashmc.co.il/identifier/pat-id-internal" (exactly)
 * identifier[internal].value 1..1
+* insert ConformanceMetadata
 
 * identifier[cml].system 1..1
 * identifier[cml].system = "http://fhir.ashmc.co.il/identifier/pat-id-cml" (exactly)

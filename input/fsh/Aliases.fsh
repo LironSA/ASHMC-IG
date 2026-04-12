@@ -9,7 +9,5 @@ Alias: $vsOrgTafType =       http://fhir.dgmc.health.gov.il/ValueSet/tafnit-dept
 
 
 Alias: $all-snomed-codes =   http://snomed.info/sct
-
-
-// External extensions
+Alias: $dar =                http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $statusChange =     http://fhir.ashmc.co.il/StructureDefinition/status-change
