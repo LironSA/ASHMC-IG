@@ -1,0 +1,103 @@
+{
+  "resourceType": "Encounter",
+  "id": "MR.2025-001234",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/encounter-main"
+    ]
+  },
+  "extension": [
+    {
+      "valueCoding": {
+        "system": "http://fhir.health.gov.il/cs/patient-mode-of-arrival-moh",
+        "code": "50",
+        "display": "אמבולנס"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id",
+            "display": "Strong Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.ashmc.co.il/identifier/tafnit-admission-no",
+      "value": "2025-001234"
+    }
+  ],
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "IMP",
+    "display": "inpatient encounter"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-encounter-type",
+          "code": "hospitalization-hdp"
+        }
+      ]
+    }
+  ],
+  "serviceType": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+        "valueCode": "unknown"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "http://fhir.ashmc.co.il/identifier/pat-id-tafnit",
+      "value": "123456789"
+    },
+    "reference": "Patient/PAT.1111"
+  },
+  "period": {
+    "start": "2025-03-15T08:30:00+02:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/patient-visit-reason-moh",
+          "code": "30",
+          "display": "תאונת דרכים"
+        },
+        {
+          "system": "http://fhir.ashmc.co.il/cs/visit-reason",
+          "code": "30",
+          "display": "תאונת דרכים"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.ashmc.co.il/cs/visit-reason",
+          "code": "4",
+          "display": "פינוי מד\"א"
+        }
+      ]
+    }
+  ],
+  "serviceProvider": {
+    "reference": "Organization/HOSP.100"
+  },
+  "status": "in-progress"
+}

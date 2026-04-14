@@ -1,0 +1,119 @@
+{
+  "resourceType": "Encounter",
+  "id": "MR.2025-004567",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "encounterInformation",
+        "display": "ביקורים"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/encounter-amb"
+    ]
+  },
+  "extension": [
+    {
+      "valueCoding": {
+        "system": "http://fhir.health.gov.il/cs/patient-mode-of-arrival-moh",
+        "code": "50",
+        "display": "אמבולנס"
+      },
+      "url": "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id",
+            "display": "Strong Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.ashmc.co.il/identifier/tafnit-admission-no",
+      "value": "2025-004567"
+    }
+  ],
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "AMB",
+    "display": "ambulatory"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-encounter-type",
+          "code": "community-hmo-ambulatory-hdp"
+        }
+      ]
+    }
+  ],
+  "serviceType": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "788007007",
+        "display": "General practice service"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "http://fhir.ashmc.co.il/identifier/pat-id-tafnit",
+      "value": "123456789"
+    },
+    "reference": "Patient/PAT.1111"
+  },
+  "participant": [
+    {
+      "type": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+              "code": "PPRF"
+            }
+          ]
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+          "valueCode": "unknown"
+        }
+      ]
+    }
+  ],
+  "period": {
+    "start": "2025-03-20T14:30:00+02:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/patient-visit-reason-moh",
+          "code": "72",
+          "display": "כוויה"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://fhir.ashmc.co.il/cs/visit-reason",
+          "code": "72",
+          "display": "כוויה"
+        }
+      ]
+    }
+  ],
+  "status": "in-progress",
+  "serviceProvider": {
+    "reference": "Organization/TAF.020202"
+  }
+}
