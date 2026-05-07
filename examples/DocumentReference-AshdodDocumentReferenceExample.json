@@ -1,0 +1,72 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "AshdodDocumentReferenceExample",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "סיכומים",
+        "display": "סיכומים"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/ashmc-document-reference"
+    ]
+  },
+  "extension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.ashmc.co.il/cs/document-router-source",
+            "code": "EMR",
+            "display": "Electronic Medical Record"
+          }
+        ]
+      },
+      "url": "http://fhir.ashmc.co.il/StructureDefinition/ext-document-source"
+    }
+  ],
+  "masterIdentifier": {
+    "system": "http://fhir.ashmc.co.il/identifier/document-router-versioned-message-id",
+    "value": "msg-v2-2026-00012345"
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.ashmc.co.il/identifier/document-router-message-id",
+      "value": "msg-2026-00012345"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://fhir.ashmc.co.il/identifier/document-message-sub-type",
+        "code": "discharge-summary"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18842-5",
+        "display": "Discharge summary"
+      }
+    ]
+  },
+  "author": [
+    {
+      "reference": "Practitioner/example"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "creation": "2026-05-04T10:00:00+03:00"
+      }
+    }
+  ],
+  "docStatus": "final",
+  "status": "current",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "date": "2026-05-04T10:30:00+03:00"
+}
